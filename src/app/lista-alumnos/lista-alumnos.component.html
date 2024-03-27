@@ -1,0 +1,28 @@
+<div class="container-title">
+    <h1>Lista de alumnos</h1>
+</div>
+
+<div class="container">
+    <table class="dynamic-table">
+        <thead>
+            <tr>
+                <th *ngFor="let column of listaAlumnos[0] | keyvalue"> {{column.key | uppercase}} </th>
+            <tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let alumno of listaAlumnos"
+                [ngClass]="alumno.nota && alumno.nota < 6 ? 'dynamic-table desaprobados' : 'dynamic-table  aprobados'">
+                <td *ngFor="let atributo of alumno | keyvalue"> {{atributo.value }} </td>
+            <tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container list" >
+    <h1> Formato lista </h1>
+    <ul *ngFor="let alumno of listaAlumnos">
+        <li [ngStyle]="{ 'color': alumno.nota < 6 ? 'red' : 'green'}">
+            {{alumno.apellido}}, {{alumno.nombre}}  <span *ngIf=" alumno.nota < 6"> Desaprobado </span> <span *ngIf=" alumno.nota >= 6"> Aprobado </span>
+        </li>
+    </ul>
+</div>

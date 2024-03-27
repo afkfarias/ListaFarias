@@ -1,0 +1,74 @@
+.container-title {
+    background-color: #1DB5CD;
+    padding: 0 !important;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+
+
+    h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {    
+    display: grid;
+}
+
+.dynamic-table {
+    width: 90%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th,
+    td {
+        border: 2px solid #3B4351;
+        padding: 0px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: medium;
+    }
+
+    thead {
+        th {
+            border: 2px solid #3B4351;
+            background-color: #3D3D3D;
+            color: #fff;
+            font-size: 20px;
+            font-weight: medium;
+            text-align: center;
+        }
+    }
+
+}
+
+tbody{
+    tr{
+    background-color: #E0E0E0;
+    color: #000;
+   
+}}
+
+.dynamic-table .desaprobados {
+    background-color: orange;
+}
+
+.dynamic-table .aprobados {
+    background-color: greenyellow;
+}
+
+span{
+    padding-left: 20px;
+}
